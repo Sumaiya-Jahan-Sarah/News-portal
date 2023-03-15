@@ -26,9 +26,20 @@ const loadCategoryNews = async (category_id) => {
         .then(data => displayCategoryNews(data.data))
 }
 const displayCategoryNews = (newses) => {
+    console.log(newses)
 
+    const newsAmount = document.getElementById('news-amount');
+    if (newses.length === 0) {
+        newsAmount.innerText = `There no news found`
+    }
+    else {
+
+        newsAmount.innerText = `${newses.length} items found for the category news`
+    }
     const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = ` `
     newses.forEach(news => {
+        console.log(news)
 
         if (news.details.length > 200) {
             news.details = `${news.details.slice(0, 300)}...`
