@@ -37,7 +37,7 @@ const loadCategoryNews = async (category_id) => {
 
 // second category news display
 const displayCategoryNews = (newses) => {
-    // console.log(newses)
+
 
     const newsAmount = document.getElementById('news-amount');
     if (newses.length === 0) {
@@ -126,7 +126,7 @@ const loadNewsData = (news_id) => {
 // display modal
 
 const newsDetailsDisplay = (news) => {
-    console.log(news)
+
     const modalDiv = document.getElementById('newsDetailsModal');
     modalDiv.innerHTML = `
     <div class="modal-dialog">
