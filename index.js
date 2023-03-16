@@ -1,9 +1,12 @@
+
+// first categories news load 
 const loadCategoriesNews = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/news/categories');
     const data = await res.json();
     displayCategoriesNews(data.data.news_category);
 }
 
+// first display news categories
 const displayCategoriesNews = (categories) => {
 
     categories.forEach(category => {
@@ -19,14 +22,21 @@ const displayCategoriesNews = (categories) => {
     })
 }
 
+
+// second category news load
 const loadCategoryNews = async (category_id) => {
     toggleLoader(true)
     fetch(`https://openapi.programming-hero.com/api/news/category/0${category_id}`)
         .then(res => res.json())
         .then(data => displayCategoryNews(data.data))
 }
+
+
+
+
+// second category news display
 const displayCategoryNews = (newses) => {
-    console.log(newses)
+    // console.log(newses)
 
     const newsAmount = document.getElementById('news-amount');
     if (newses.length === 0) {
@@ -38,8 +48,10 @@ const displayCategoryNews = (newses) => {
     }
     const newsContainer = document.getElementById('news-container');
     newsContainer.innerHTML = ` `
-    newses.forEach(news => {
-        console.log(news)
+    const mostviewers = newses.sort(function (a, b) { return b.total_view - a.total_view })
+    mostviewers.forEach(news => {
+
+
 
         if (news.details.length > 200) {
             news.details = `${news.details.slice(0, 300)}...`
@@ -102,7 +114,7 @@ const displayCategoryNews = (newses) => {
     toggleLoader(false)
 }
 
-
+// modal load
 const loadNewsData = (news_id) => {
     fetch(`https://openapi.programming-hero.com/api/news/${news_id}`)
         .then(res => res.json())
@@ -110,13 +122,15 @@ const loadNewsData = (news_id) => {
 }
 
 
-
+// display modal
 
 const newsDetailsDisplay = (news) => {
     console.log(news)
 
 }
 
+
+// spinner
 
 const toggleLoader = (res) => {
     const loader = document.getElementById('loader');
@@ -127,4 +141,9 @@ const toggleLoader = (res) => {
     else { loader.classList.add('d-none') }
 }
 
+
+
 loadCategoriesNews()
+
+
+
