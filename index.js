@@ -13,7 +13,8 @@ const displayCategoriesNews = (categories) => {
 
         const newsContainer = document.getElementById('news-category');
         const newscategory = document.createElement('span');
-
+        // newscategory.classList.add('btn')
+        // newscategory.classList.add('btn-light')
         newscategory.innerHTML = `<p onclick="loadCategoryNews(${category.category_id})">
     ${category.category_name}</p>
    
@@ -67,11 +68,11 @@ const displayCategoryNews = (newses) => {
         newsDiv.classList.add('rounded');
 
         newsDiv.innerHTML = `
-        <div class=" row align-items-center">
-        <div class="col-4">
+        <div class=" row row-cols-1  rows-cols-sm-1 rows-cols-md-2 align-items-center">
+        <div class="col-12 col-sm-12 col-md-4">
             <img class="img-fluid" src="${news.image_url}" alt="...">
         </div>
-        <div class="col-8">
+        <div class="col-12 col-sm-12 col-md-8">
             <div>
                 <h5 class="">${news.title}</h5>
                 <p class="text-muted">${news.details}.</p>
@@ -166,75 +167,7 @@ const toggleLoader = (res) => {
 }
 
 
-document.getElementById('blog').addEventListener('click', function () {
-    const blog = document.getElementById('blog-question');
-    blog.innerHTML = `
-    <div class="accordion" id="accordionBlog">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Different among <strong>var</strong> <strong>let</strong> <strong>const</strong> ?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                        data-bs-parent="#accordionBlog">
-                        <div class="accordion-body">
-                          <p>  var: Variables declared with var are function-scoped. If a var variable is declared outside
-                            of any function, it becomes globally scoped, and is available throughout the entire program.
-                            Additionally, var variables can be re-declared and reassigned within their scope.</p>
 
-                           <p> let: Variables declared with let are block-scoped.let variables can be reassigned within
-                            their scope, but cannot be re-declared.</p>
-
-                          <p>  const: Variables declared with const are also block-scoped, like let. Additionally, const
-                            variables cannot be re-declared within their scope.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Different between <strong>  Arrow function </strong>  and  <strong>  Regular function </strong>
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionBlog">
-                        <div class="accordion-body">
-                          <p>  1. Syntax: Arrow functions have a shorter syntax than regular functions. Instead of using
-                            the function keyword, you use an arrow (=>) between the function parameters and the function
-                            body.</p>
-                          <p>  2.this binding: One key difference between arrow functions and regular functions is how they
-                            bind the this keyword. In regular functions, the value of this is determined by how the
-                            function is called.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Why do we use Template strings?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                        data-bs-parent="#accordionBlog">
-                        <div class="accordion-body"> <p>
-                            1. String interpolation: One of the main benefits of using template strings is that they
-                            allow for string interpolation, which means you can embed expressions or variables within a
-                            string.</p>
-                          <p>  2. Multi-line strings: Template strings also allow for the creation of multi-line strings.</p>
-                           <p> 3.Cleaner code: Using template strings can often make code easier to read and maintain,
-                            especially when you need to include variables or expressions within a string.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    `
-
-
-})
 
 
 

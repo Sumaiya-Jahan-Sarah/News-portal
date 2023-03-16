@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Actualities Daily </title>
+    <title>Sunrise</title>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/5a327b6a10.js" crossorigin="anonymous"></script>
     <!-- bootstrap -->
@@ -22,39 +22,53 @@
 
 <body class="container-md" style="font-family: 'Poppins', sans-serif;">
     <header>
-
-
-        <nav>
-            <div class="d-flex flex-wrap justify-content-around align-items-center">
-                <div>
-                    <h1 class="text-primary fw-semibold " href="#">
-                        <i class="fa-solid fa-rectangle-ad"></i>
-                        The Actualities Daily
-                    </h1>
-                </div>
-
-                <div>
-                    <button class="me-2 btn btn-outline-primary text-decoration-underline fw-bolder"
-                        href="index.html">Home
+        <section class="d-sm-flex justify-content-center">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid d-flex justify-content-end">
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                            <a class="navbar-brand text-primary fw-semibold " href="#">
+                                <i class="fa-solid fa-rectangle-ad"></i>
+                                Bootstrap
+                            </a>
+                        </div>
+                    </nav>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="text-muted btn btn-outline-primary border border-0" href="blog.html">Blog</a>
-                    <img class="img-thumbnail " style="width: 50px; border-radius: 50%;"
-                        src="images/image thumbnail.webp" alt="">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex justify-content-end ">
+                            <a class="nav-link active text-decoration-underline fw-semibold" aria-current="page"
+                                href="#">Home</a>
+                            <a id="blog" class="nav-link text-secondary " href="#">Blog</a>
+                            <a href="#"><img class="img-thumbnail " style="width: 50px; border-radius: 50%;"
+                                    src="images/image thumbnail.webp" alt=""></a>
 
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
 
         <hr>
-        <!-- show news list -->
-
-        <section class=" my-4 d-flex flex-wrap justify-content-around fw-semibold text-muted" id="news-category">
+        <section class=" my-4 d-flex justify-content-around fw-semibold text-muted" id="news-category">
 
         </section>
     </header>
-
-
-
     <main>
 
         <!-- loader -->
@@ -108,10 +122,8 @@
         </section>
 
     </main>
-    <hr>
-    <footer class="text-center text-muted">
-        <p> Copyright @ 2022 All Rights Reserved</p>
-    </footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

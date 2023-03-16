@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/5a327b6a10.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter&family=Lobster&family=Nunito+Sans&family=Poppins:ital,wght@0,500;0,600;1,400&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+
+    <title>Actualities Daily</title>
+</head>
+
+<body class="container-md" style="font-family: 'Poppins', sans-serif;">
+
+    <header>
+        <nav>
+            <div class="d-flex flex-wrap justify-content-around align-items-center">
+                <div>
+                    <h1 class="text-primary fw-semibold " href="#">
+                        <i class="fa-solid fa-rectangle-ad"></i>
+                        The Actualities Daily
+                    </h1>
+                </div>
+
+                <div>
+                    <a class="me-2 btn btn-outline-primary text-decoration-underline fw-bolder" href="index.html">Home
+                    </a>
+                    <a class="text-muted btn btn-outline-primary border border-0" href="blog.html">Blog</a>
+                    <img class="img-thumbnail " style="width: 50px; border-radius: 50%;"
+                        src="images/image thumbnail.webp" alt="">
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <h1 class="text-center ">Our Blog</h1>
+            <div class="accordion" id="accordionBlog">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong> Different among var let const ?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionBlog">
+                        <div class="accordion-body">
+                            <p> var: Variables declared with var are function-scoped. If a var variable is declared
+                                outside
+                                of any function, it becomes globally scoped, and is available throughout the entire
+                                program.
+                                Additionally, var variables can be re-declared and reassigned within their scope.</p>
+
+                            <p> let: Variables declared with let are block-scoped.let variables can be reassigned within
+                                their scope, but cannot be re-declared.</p>
+
+                            <p> const: Variables declared with const are also block-scoped, like let. Additionally,
+                                const
+                                variables cannot be re-declared within their scope.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><strong>
+                                Different between Arrow function and Regular function </strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionBlog">
+                        <div class="accordion-body">
+                            <p> 1. Syntax: Arrow functions have a shorter syntax than regular functions. Instead of
+                                using
+                                the function keyword, you use an arrow (=>) between the function parameters and the
+                                function
+                                body.</p>
+                            <p> 2.this binding: One key difference between arrow functions and regular functions is how
+                                they
+                                bind the this keyword. In regular functions, the value of this is determined by how the
+                                function is called.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong> Why do we use Template strings?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionBlog">
+                        <div class="accordion-body">
+                            <p>
+                                1. String interpolation: One of the main benefits of using template strings is that they
+                                allow for string interpolation, which means you can embed expressions or variables
+                                within a
+                                string.</p>
+                            <p> 2. Multi-line strings: Template strings also allow for the creation of multi-line
+                                strings.
+                            </p>
+                            <p> 3.Cleaner code: Using template strings can often make code easier to read and maintain,
+                                especially when you need to include variables or expressions within a string.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
