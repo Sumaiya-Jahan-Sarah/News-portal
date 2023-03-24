@@ -1,12 +1,15 @@
 
-// first categories news load 
+// first: categories news load 
 const loadCategoriesNews = async () => {
-    const res = await fetch('https://openapi.programming-hero.com/api/news/categories');
-    const data = await res.json();
-    displayCategoriesNews(data.data.news_category);
+    try {
+        const res = await fetch('https://openapi.programming-hero.com/api/news/categories');
+        const data = await res.json();
+        displayCategoriesNews(data.data.news_category);
+    }
+    catch (error) { console.log(error) }
 }
 
-// first display news categories
+// first: display news categories
 const displayCategoriesNews = (categories) => {
 
     categories.forEach(category => {
@@ -24,18 +27,23 @@ const displayCategoriesNews = (categories) => {
 }
 
 
-// second category news load
+// second: category news load
 const loadCategoryNews = async (category_id) => {
     toggleLoader(true)
-    fetch(`https://openapi.programming-hero.com/api/news/category/0${category_id}`)
-        .then(res => res.json())
-        .then(data => displayCategoryNews(data.data))
+    try {
+        fetch(`https://openapi.programming-hero.com/api/news/category/0${category_id}`)
+
+            .then(res => res.json())
+            .then(data => displayCategoryNews(data.data))
+            .catch(error => console.error('Error:', error));
+    }
+    catch (error) { console.log(error) }
 }
 
 
 
 
-// second category news display
+// second: category news display
 const displayCategoryNews = (newses) => {
 
 
@@ -117,9 +125,13 @@ const displayCategoryNews = (newses) => {
 
 // modal load
 const loadNewsData = (news_id) => {
-    fetch(`https://openapi.programming-hero.com/api/news/${news_id}`)
-        .then(res => res.json())
-        .then(data => newsDetailsDisplay(data.data[0]));
+    try {
+        fetch(`https://openapi.programming-hero.com/api/news/${news_id}`)
+            .then(res => res.json())
+            .then(data => newsDetailsDisplay(data.data[0]));
+    }
+    catch (error) { console.log(error) }
+
 }
 
 
